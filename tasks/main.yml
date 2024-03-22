@@ -1,2 +1,16 @@
 ---
-# tasks file for role-demo-debug
+- name: Main Task in ROLE (DEFAULTS Variable)
+  debug: 
+    var: var_main
+
+- name: Main Task in ROLE (VARS Variable)
+  debug: 
+    var: var_vars
+
+- name: Main Task in ROLE (PLAYBOOK Variable)
+  debug: 
+    var: var_playbook
+
+- name: Main Task in ROLE (Inventory Variable)
+  debug: 
+    var: var_inventory

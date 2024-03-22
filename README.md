@@ -11,11 +11,22 @@ This role is can be used with any playbook, but was designed specifically to be 
 Role Variables
 --------------
 
-There are no dependencies for this role.
+There are four variables that can be used in the Role. Two of the variables appear in the ROLE and are already defined and two of the variables come from the project, one is a Playbook variable and the other is an Inventory variable.
+
+Main Task in ROLE (DEFAULTS Variable): var_main
+
+Main Task in ROLE (VARS Variable): var_vars
+
+Main Task in ROLE (PLAYBOOK Variable): var_playbook
+
+Main Task in ROLE (Inventory Variable): var_inventory
+
+
 
 Dependencies
 ------------
 
+There are no dependencies for this role.
 
 Example Playbook
 ----------------
@@ -29,9 +40,9 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+GPS
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Travis Michette tmichett@redhat.com

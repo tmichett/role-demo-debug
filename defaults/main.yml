@@ -1,4 +1,4 @@
 ---
 # defaults file for role-demo-debug
 
-var_main: This is a role variable from MAIN
+var_main: This is a role variable from tasks/main.yml and the DEFAULTS folder.
