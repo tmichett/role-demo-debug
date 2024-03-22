@@ -34,7 +34,7 @@ galaxy_info:
   #   - 25
   # - name: SomePlatform
 
-    - name: Red Hat
+    - name: EL
       versions:
         - all
 
