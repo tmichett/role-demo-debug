@@ -30,6 +30,8 @@ There are no dependencies for this role.
 
 Example Inventory
 ----------------
+
+```bash
 servera 
 serverb
 serverc
@@ -37,7 +39,7 @@ serverd
 
 [all:vars]
 var_inventory=This is a ROLE variable from Inventory
-
+```
 
 Example Playbook
 ----------------
@@ -45,7 +47,7 @@ Example Playbook
 Need to also define an inventory variable.
 
 
-
+```yaml
 ---
 - name: This is a sample playbook to demonstrate order with ROLES
   hosts: localhost
@@ -53,7 +55,7 @@ Need to also define an inventory variable.
     - var_playbook: This is a ROLE Variable from the PLAYBOOK 
   roles:
     - tmichett.role-demo-debug
-
+```
 
 License
 -------
