@@ -13,13 +13,13 @@ Role Variables
 
 There are four variables that can be used in the Role. Two of the variables appear in the ROLE and are already defined and two of the variables come from the project, one is a Playbook variable and the other is an Inventory variable.
 
-Main Task in ROLE (DEFAULTS Variable): var_main
+**var_main**: Main Task in ROLE (DEFAULTS Variable)
 
-Main Task in ROLE (VARS Variable): var_vars
+**var_vars** Main Task in ROLE (VARS Variable)
 
-Main Task in ROLE (PLAYBOOK Variable): var_playbook
+**var_playbook** : Main Task in ROLE (PLAYBOOK Variable)
 
-Main Task in ROLE (Inventory Variable): var_inventory
+**var_inventory**: Main Task in ROLE (Inventory Variable)
 
 
 
@@ -28,14 +28,32 @@ Dependencies
 
 There are no dependencies for this role.
 
+Example Inventory
+----------------
+servera 
+serverb
+serverc
+serverd
+
+[all:vars]
+var_inventory=This is a ROLE variable from Inventory
+
+
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Need to also define an inventory variable.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+
+
+---
+- name: This is a sample playbook to demonstrate order with ROLES
+  hosts: localhost
+  vars:
+    - var_playbook: This is a ROLE Variable from the PLAYBOOK 
+  roles:
+    - tmichett.role-demo-debug
+
 
 License
 -------
